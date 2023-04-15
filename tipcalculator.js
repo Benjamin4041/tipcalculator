@@ -25,7 +25,7 @@ percentBtn.forEach((items,idx)=>{
                   numPeople.style.borderColor = "";
                 });
               }
-              let total = (amount + tip) / e.target.value;
+              let total = (Number(amount) + Number(tip)) / Number(numPeople.value);
               document.querySelector(".A").textContent = tip.toLocaleString("en-US", {
                 style: "currency",
                 currency: "USD",
