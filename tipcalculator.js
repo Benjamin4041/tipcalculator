@@ -36,16 +36,13 @@ percentBtn.forEach((items,idx)=>{
               });
               reset.removeAttribute("disabled");
             });
-          }
-          
-          
-        else if(items===percentBtn[1]){
+        }else if(items===percentBtn[1]){
             console.log(amount)
             items.style.backgroundColor="#C5E4E7"
             items.style.borderColor="#C5E4E7"
-            res=(amount*10)/100
+           
             numPeople.addEventListener("keyup",(e)=>{
-              tip=res/e.target.value//tip
+            let tip = (amount * 0.10) / e.target.value;
               console.log(tip)
               if(numPeople.value===""||numPeople.value===0){
                 numPeople.style.borderColor="red"
@@ -64,9 +61,8 @@ percentBtn.forEach((items,idx)=>{
             console.log(amount)
             items.style.backgroundColor="#C5E4E7"
             items.style.borderColor="#C5E4E7"
-            res=(amount*15)/100
             numPeople.addEventListener("keyup",(e)=>{
-                tip=res/e.target.value //tip
+            let tip = (amount * 0.15) / e.target.value;
               console.log(tip)
               if(numPeople.value===""||numPeople.value===0){
                 numPeople.style.borderColor="red"
@@ -86,9 +82,8 @@ percentBtn.forEach((items,idx)=>{
             console.log(amount)
             items.style.backgroundColor="#C5E4E7"
             items.style.borderColor="#C5E4E7"
-            res=(amount*25)/100
             numPeople.addEventListener("keyup",(e)=>{
-                tip=res/e.target.value //tip
+                let tip = (amount * 0.25) / e.target.value;
                 console.log(tip)
                 if(numPeople.value===""||numPeople.value===0){
                     numPeople.style.borderColor="red"
@@ -107,9 +102,8 @@ percentBtn.forEach((items,idx)=>{
             console.log(amount)
             items.style.backgroundColor="#C5E4E7"
             items.style.borderColor="#C5E4E7"
-            res=(amount*50)/100
             numPeople.addEventListener("keyup",(e)=>{
-                tip=res/e.target.value //tip
+                let tip = (amount * 0.5) / e.target.value;
                 console.log(tip)
                 if(numPeople.value===""||numPeople.value===0){
                     numPeople.style.borderColor="red"
