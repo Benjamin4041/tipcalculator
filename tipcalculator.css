@@ -1,0 +1,331 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&family=Space+Mono:wght@400;700&display=swap');
+body{
+    background-color: hsl(185, 41%, 84%);
+}
+h1{
+    text-align: center;
+    position: relative;
+    top: 3.5em;
+    font-family: 'Overpass', sans-serif;
+    color: hsl(186, 14%, 43%);
+}
+#cal-bg{
+    background-color: hsl(189, 41%, 97%);
+    width:540px;
+    height:300px;
+    position:relative;
+    top:8em;
+    left:28em;
+    border-radius: 10px;
+}
+#cal-result{
+    background-color: hsl(183, 100%, 15%);
+    width: 250px;
+    height: 268px;
+    position: absolute;
+    left: 17em;
+    top: 1em;
+    border-radius: 10px;
+    font-family: 'Overpass', sans-serif;
+}
+#bill{
+    position: relative;
+    top: 1em;
+    left: 2em;
+}
+#form{
+    position:absolute;
+    bottom:1.7em;
+    width: 50%;
+}
+#p{
+    width:60px;
+    height:24px;
+    position: relative;
+    left:1.9em;
+    cursor: pointer;
+}
+.I{
+    position: relative;
+    left: 2.5em;
+}
+#select{
+    position: relative;
+    left: 2em;
+    font-family: 'Overpass', sans-serif;
+}
+.bnt{
+    width: 69px;
+    height:30px;
+    font-size: larger;
+    background-color: hsl(183, 100%, 15%);
+    border-color:hsl(183, 100%, 15%);
+    margin-top: 6px;
+    margin-left: 5px;
+    border-radius: 3px;
+    cursor:pointer;
+    position: relative;
+    left:1em;
+    color:hsl(0, 0%, 100%);
+    font-family: 'Overpass', sans-serif;
+} 
+.bnt:hover{
+    background-color: hsl(185, 41%, 84%);
+    border-color: hsl(185, 41%, 84%);
+}
+#people{
+    position: relative;
+    left: 2em;
+    top: 1em;
+    font-family: 'Overpass', sans-serif;
+}
+.placeicon{
+    font-family: aw;
+    
+}
+.t{
+    position: relative;
+    left:1em;
+    top: 2em;
+    color: white;
+}
+.A{
+    position: relative;
+    left: 4.7em;
+    bottom: 1em;
+    font-size: xx-large;
+    color: hsl(172, 67%, 45%);
+}
+.p{
+    position: relative;
+    bottom: 4em;
+    left: 1em;
+}
+#total{
+    position: relative;
+    left:1em;
+    bottom: 3em;
+    color: white;
+}
+#A2{
+    position: relative;
+    left: 4.7em;
+    bottom: 3.5em;
+    font-size: xx-large;
+    color: hsl(172, 67%, 45%);
+}
+#p2{
+    position: relative;
+    bottom: 8.9em;
+    left: 1em;
+
+}
+#reset{
+    position: relative;
+    bottom: 7.5em;
+    padding-left: 90px;
+    padding-right: 90px;
+    left: 1em;
+    padding-top:5px;
+    padding-bottom:5px;
+    background-color:hsl(184, 14%, 56%);
+    cursor:not-allowed;
+}
+#b,.people2{
+    color: hsl(172, 67%, 45%);
+    text-align: right;
+    height:2em;
+    width:77%;
+}
+#user{
+    position:absolute;
+    top:16.6em;
+    left:2.5em;
+    z-index:1;
+}
+.fa-user{
+    color:grey;
+    opacity: 50%;
+}
+#zero{
+    position: absolute;
+    left:4em;
+}
+#dollar-sign{
+    position:absolute;
+    top:3.6em;
+    left:2.5em;
+    z-index:1;
+    color: grey;
+}
+@media screen and (max-width: 600px) {
+    *{
+        padding:0;
+    }
+    body{
+        overflow: hidden;
+        width:100vw;
+        height:100vh;
+        margin:0;
+    }
+    h1{
+        top: 0.5em;
+    }
+    #cal-bg{
+        display: flex;
+        width:100vw;
+        height:55vh;
+        padding-top:12em;
+        justify-content:center;
+        border-radius:5px;
+        left:0em;
+        top:1.5em;
+        align-items: center;
+        border-radius:10px;
+        padding-bottom: 2em;
+    }
+    #cal-result{
+        background-color: hsl(183, 100%, 15%);
+        width:100%;
+        height:18em;
+        position:absolute;
+        left:0em;
+        margin-top:26em;
+        border-radius: 10px;
+    }
+    #reset{
+        position: relative;
+        bottom:10em;
+        padding-left: 90px;
+        padding-right: 90px;
+        left: 5em;
+        padding-top:5px;
+        padding-bottom:5px;
+        background-color:hsl(184, 14%, 56%);
+        cursor: pointer;
+    }
+    #A2{
+        position: relative;
+        margin-left: 3.5em;
+        bottom: 3.5em;
+        font-size: xx-large;
+        color: hsl(172, 67%, 45%);
+        width: 20%;
+    }
+    .A{
+        position: relative;
+        margin-left: 3.5em;
+        bottom: 1em;
+        font-size: xx-large;
+        color: hsl(172, 67%, 45%);
+        width:20%;
+    }
+    #total {
+        position: relative;
+        left: 1em;
+        bottom: 3em;
+        color: white;
+        width: 20%;
+    }
+    .t {
+        position: relative;
+        left: 1em;
+        top: 2em;
+        color: white;
+        width:21%;
+    }
+    #p2 {
+        position: relative;
+        bottom: 8.9em;
+        left: 1em;
+        width: 20%;
+    }
+    .p {
+        position: relative;
+        bottom: 4em;
+        left: 1em;
+        width: 20%;
+    }
+    #form{
+        width:100%;
+        bottom:20em;
+    }
+    #people {
+        position: relative;
+        left: 2em;
+        top: 1em;
+        width: 36%;
+    }
+    #select{
+        width:24%;
+    }
+    #bill{
+        width: 20%;
+    }
+    .bnt {
+        width: 137px;
+        height: 45px;
+        font-size: larger;
+        background-color: hsl(183, 100%, 15%);
+        border-color: hsl(183, 100%, 15%);
+        margin-top: 6px;
+        margin-left: 18px;
+        border-radius: 3px;
+        cursor: pointer;
+        position: relative;
+        left: 1em;
+    }
+    #p {
+        width: 131px;
+        height: 40px;
+        position: relative;
+        left: 2.3em;
+        cursor: pointer;
+        margin-top: 0.5em;
+        margin-left:0.6em;
+    }
+    #b, .people2 {
+    color: hsl(172, 67%, 45%);
+    padding: 0.9em;
+    width: 76%;
+    background-color: hsl(172deg 14% 86%);
+    border: none;
+    font-weight: bold;
+    font-size:14px;
+} 
+    #button-continer{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    #dollar-sign{
+        position:absolute;
+        top:4.2em;
+        left:2.5em;
+        z-index:1;
+        color: grey;
+    }
+    #user {
+        position: absolute;
+        top: 23.7em;
+        left: 2.5em
+    }
+    /* 
+          
+   
+
+
+*/
+   /* .S{
+        width:18em;
+        /* padding-right:6em; 
+        left:1.7em;
+        height:2em;
+    } */
+
+
+
+
+
+
+
+}
