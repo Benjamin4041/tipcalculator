@@ -19,11 +19,14 @@ percentBtn.forEach((items,idx)=>{
             items.style.borderColor="#C5E4E7"
 
 
-            res=(amount*5)/100
+            // res=(amount*5)/100
 
 
             numPeople.addEventListener("keyup",(e)=>{
-                tip=res/e.target.value //tip
+
+                // tip=res/e.target.value //tip
+                let tip = (amount * 5) / (100 * numPeople.value);
+
                 console.log(tip)
 
 
@@ -34,11 +37,11 @@ percentBtn.forEach((items,idx)=>{
                     })
                 }
 
-
+                
                     
                   let total=(amount + tip)/numPeople.value
                   document.querySelector(".A").textContent=tip.toLocaleString('en-US', { style: 'currency', currency: 'USD' })
-                  document.querySelector("#A2").textContent=total
+                  document.querySelector("#A2").textContent=total.toLocaleString('en-US', { style: 'currency', currency: 'USD' })
                   reset.removeAttribute("disabled")
                 // console.log((amount/5)+tip)//total
           })
