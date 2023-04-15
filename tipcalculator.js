@@ -39,7 +39,7 @@ percentBtn.forEach((items,idx)=>{
 
                 
                     
-                //   let total=(amount + tip)/numPeople.value
+                let total = (amount + tip) / numPeople.value;
                   document.querySelector(".A").textContent=tip.toLocaleString('en-US', { style: 'currency', currency: 'USD' })
                   document.querySelector("#A2").textContent=total.toLocaleString('en-US', { style: 'currency', currency: 'USD' })
                   reset.removeAttribute("disabled")
