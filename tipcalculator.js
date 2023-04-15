@@ -25,7 +25,7 @@ percentBtn.forEach((items,idx)=>{
             numPeople.addEventListener("keyup",(e)=>{
 
                 // tip=res/e.target.value //tip
-                let tip = (amount * 5) / (100 * numPeople.value);
+                let tip = (amount * 0.05) / ( numPeople.value);
 
                 console.log(tip)
 
