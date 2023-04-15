@@ -131,20 +131,37 @@ percentBtn.forEach((items,idx)=>{
 // alert(((amount*costormNum)/100)/5)
 // })
 
-numPeople.addEventListener("keyup",()=>{
-    let amount=document.querySelector("#b").value
-    let costormPercent=document.querySelector("#p").value
-    costormNum=Number(costormPercent.replace('%',''))
-    let tip=((amount*costormNum)/100)/numPeople.value
-    let total=(amount + tip)/numPeople.value
-    document.querySelector(".A").textContent=tip.toLocaleString('en-US', { style: 'currency', currency: 'USD' })
-    document.querySelector("#A2").textContent=total.toLocaleString('en-US', { style: 'currency', currency: 'USD' })
-    reset.style.cursor="pointer";
-    reset.disabled=false
+// numPeople.addEventListener("keyup",()=>{
+//     let amount=document.querySelector("#b").value
+//     let costormPercent=document.querySelector("#p").value
+//     costormNum=Number(costormPercent.replace('%',''))
+//     let tip=((amount*costormNum)/100)/numPeople.value
+//     let total=(amount + tip)/numPeople.value
+//     document.querySelector(".A").textContent=tip.toLocaleString('en-US', { style: 'currency', currency: 'USD' })
+//     document.querySelector("#A2").textContent=total.toLocaleString('en-US', { style: 'currency', currency: 'USD' })
+//     reset.style.cursor="pointer";
+//     reset.disabled=false
     
 
-    // console.log()
-})
+//     // console.log()
+// })
+
+numPeople.addEventListener("keyup",()=>{
+    let amount = Number(document.querySelector("#b").value);
+    let costormPercent = Number(document.querySelector("#p").value);
+    
+    // Check if the fields have values
+    if (amount && costormPercent) {
+      costormNum = costormPercent;
+      let tip = (amount * costormNum) / (100 * numPeople);
+      let total = (amount + tip) / numPeople;
+      document.querySelector(".A").textContent = tip.toLocaleString('en-US', { style: 'currency', currency: 'USD' });
+      document.querySelector("#A2").textContent = total.toLocaleString('en-US', { style: 'currency', currency: 'USD' });
+      reset.style.cursor = "pointer";
+      reset.disabled = false;
+    }   
+});
+
 
 reset.addEventListener("click",()=>{
     window.location.reload()
