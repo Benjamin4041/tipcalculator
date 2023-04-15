@@ -138,7 +138,7 @@ numPeople.addEventListener("keyup",()=>{
     let tip=((amount*costormNum)/100)/numPeople.value
     let total=(amount * tip)/numPeople.value
     document.querySelector(".A").textContent=tip.toLocaleString('en-US', { style: 'currency', currency: 'USD' })
-    document.querySelector("#A2").textContent=total.toLocaleString('en-US', { style: 'currency', currency: 'USD' })
+    document.querySelector("#A2").textContent=total
     reset.style.cursor="pointer";
     reset.disabled=false
     
