@@ -153,8 +153,8 @@ numPeople.addEventListener("keyup",()=>{
     // Check if the fields have values
     if (amount && costormPercent) {
       costormNum = costormPercent;
-      let tip = (amount * costormNum) / (100 * numPeople);
-      let total = (amount + tip) / numPeople;
+      let tip = (amount * costormNum) / (100 * numPeople.value);
+      let total = (amount + tip) / numPeople.value;
       document.querySelector(".A").textContent = tip.toLocaleString('en-US', { style: 'currency', currency: 'USD' });
       document.querySelector("#A2").textContent = total.toLocaleString('en-US', { style: 'currency', currency: 'USD' });
       reset.style.cursor = "pointer";
