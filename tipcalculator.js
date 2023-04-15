@@ -16,24 +16,28 @@ percentBtn.forEach((items,idx)=>{
         if (items === percentBtn[0]) {
             items.style.backgroundColor = "#C5E4E7";
             items.style.borderColor = "#C5E4E7";
-          
             numPeople.addEventListener("keyup", (e) => {
               let tip = (amount * 0.05) / e.target.value;
               console.log(tip);
-          
               if (numPeople.value === "" || numPeople.value === 0) {
                 numPeople.style.borderColor = "red";
                 numPeople.addEventListener("keydown", () => {
                   numPeople.style.borderColor = "";
                 });
               }
-          
-              let total = (amount + tip) / numPeople.value;
-              document.querySelector(".A").textContent = tip.toLocaleString("en-US", { style: "currency", currency: "USD" });
-              document.querySelector("#A2").textContent = total.toLocaleString("en-US", { style: "currency", currency: "USD" });
+              let total = (amount + tip) / e.target.value;
+              document.querySelector(".A").textContent = tip.toLocaleString("en-US", {
+                style: "currency",
+                currency: "USD",
+              });
+              document.querySelector("#A2").textContent = total.toLocaleString("en-US", {
+                style: "currency",
+                currency: "USD",
+              });
               reset.removeAttribute("disabled");
             });
           }
+          
           
         else if(items===percentBtn[1]){
             console.log(amount)
