@@ -1,44 +1,49 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+        <link rel="stylesheet" href="tipcalculator.css">
+    </head>
+    <body>
+        <h1>SPLI<br>TTER</h1>
+        <div id="cal-bg">
+            <div id="cal-result">
+                <p class="t">Tip Amount</p>
+                <p class="A"><b>$0.00</b></p>
+                <p class="p">/ Person</p>
+                <!-- total -->
+                <p id="total">Total</p>
+                <p id="A2"><b>$0.00</b></p>
+                <p id="p2">/ Person</p>
+                <button id="reset" disabled>Reset</button>
+            </div>
+            
+            <form action="" id="form">
+                <p id="bill">Bill</p>
+                <label id="dollar-sign" for="S"><i class="fa-solid fa-dollar-sign"></i> </label>
+                <input class="I S" placeholder="0" type="text" id="b" ><br>
+                <p id="select">Select tip %</p>
+                <div id="button-continer">
+                <input class="I bnt" type="button" value="5%" id="five">
+                <input class="I bnt" type="button" value="10%">
+                <input class="I bnt" type="button" value="15%"><br>
+                <input class="I bnt" type="button" value="25%">
+                <input class="I bnt" type="button" value="50%">
+                <input  type="text" id="p" placeholder="Custom"><br>
+                </div>
+                <p id="people" >Number of people</p>
+                <p id="zero">Cant be zero</p>
+                <label for="s" id="user"><i class="fa-solid fa-user"></i></label>
+                <input class="I S placeicon people2" placeholder="0" type="text">
+            </form>
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Tip calculator app</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
-
-  Bill
-
-  Select Tip %
-  5%
-  10%
-  15%
-  25%
-  50%
-  Custom
-
-  Number of People
-
-  Tip Amount
-  / person
-
-  Total
-  / person
-
-  Reset
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+        </div>
+        
+        <script src="tipcalculator.js" async defer></script>
+    </body>
 </html>
