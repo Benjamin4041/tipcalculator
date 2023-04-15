@@ -13,39 +13,35 @@ let costormPercent=document.querySelector("#p").value
 percentBtn.forEach((items,idx)=>{
     items.addEventListener("click",()=>{
         let amount=document.querySelector("#b").value
-        if(items===percentBtn[0]){
-            console.log(amount)
-            items.style.backgroundColor="#C5E4E7"
-            items.style.borderColor="#C5E4E7"
-
-
-            // res=(amount*5)/100
-
-
-            numPeople.addEventListener("keyup",(e)=>{
-
-                // tip=res/e.target.value //tip
-                let tip = (amount * 0.05) / ( numPeople.value);
-
-                console.log(tip)
-
-
-                if(numPeople.value===""||numPeople.value===0){
-                    numPeople.style.borderColor="red"
-                    numPeople.addEventListener("keydown",()=>{
-                        numPeople.style.borderColor=""
-                    })
-                }
-
-                
-                    
-                let total = (amount + tip) / numPeople.value;
-                  document.querySelector(".A").textContent=tip.toLocaleString('en-US', { style: 'currency', currency: 'USD' })
-                  document.querySelector("#A2").textContent=total.toLocaleString('en-US', { style: 'currency', currency: 'USD' })
-                  reset.removeAttribute("disabled")
-                // console.log((amount/5)+tip)//total
-          })
-        }else if(items===percentBtn[1]){
+        if (items === percentBtn[0]) {
+            console.log(amount);
+            items.style.backgroundColor = "#C5E4E7";
+            items.style.borderColor = "#C5E4E7";
+          
+            numPeople.addEventListener("keyup", (e) => {
+              let tip = (amount * 0.05) / numPeople.value;
+          
+              console.log(tip);
+          
+              if (numPeople.value === "" || numPeople.value === 0) {
+                numPeople.style.borderColor = "red";
+                numPeople.addEventListener("keydown", () => {
+                  numPeople.style.borderColor = "";
+                });
+              }
+          
+              let total = (amount + tip) / numPeople.value;
+              document.querySelector(".A").textContent = tip.toLocaleString("en-US", {
+                style: "currency",
+                currency: "USD",
+              });
+              document.querySelector("#A2").textContent = total.toLocaleString("en-US", {
+                style: "currency",
+                currency: "USD",
+              });
+              reset.removeAttribute("disabled");
+            });
+          }else if(items===percentBtn[1]){
             console.log(amount)
             items.style.backgroundColor="#C5E4E7"
             items.style.borderColor="#C5E4E7"
