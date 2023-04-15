@@ -14,13 +14,11 @@ percentBtn.forEach((items,idx)=>{
     items.addEventListener("click",()=>{
         let amount=document.querySelector("#b").value
         if (items === percentBtn[0]) {
-            console.log(amount);
             items.style.backgroundColor = "#C5E4E7";
             items.style.borderColor = "#C5E4E7";
           
             numPeople.addEventListener("keyup", (e) => {
-              let tip = (amount * 0.05) / numPeople.value;
-          
+              let tip = (amount * 0.05) / e.target.value;
               console.log(tip);
           
               if (numPeople.value === "" || numPeople.value === 0) {
@@ -31,17 +29,13 @@ percentBtn.forEach((items,idx)=>{
               }
           
               let total = (amount + tip) / numPeople.value;
-              document.querySelector(".A").textContent = tip.toLocaleString("en-US", {
-                style: "currency",
-                currency: "USD",
-              });
-              document.querySelector("#A2").textContent = total.toLocaleString("en-US", {
-                style: "currency",
-                currency: "USD",
-              });
+              document.querySelector(".A").textContent = tip.toLocaleString("en-US", { style: "currency", currency: "USD" });
+              document.querySelector("#A2").textContent = total.toLocaleString("en-US", { style: "currency", currency: "USD" });
               reset.removeAttribute("disabled");
             });
-          }else if(items===percentBtn[1]){
+          }
+          
+        else if(items===percentBtn[1]){
             console.log(amount)
             items.style.backgroundColor="#C5E4E7"
             items.style.borderColor="#C5E4E7"
